@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "rootDirs": [".", "../shared"],
+    "outDir": "build",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"]
+}

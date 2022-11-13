@@ -1,0 +1,28 @@
+[programs.localnet]
+feeble_machine = "VENDzam3eJ4Kn8KmVndH7qdF23jMf3NkogyLvA5XJxV"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/wallet.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 --async-only --async-stack-traces=true --full-trace=true tests/**/*.ts"
+
+[test]
+startup_wait=10000
+
+[test.validator]
+url = "https://api.devnet.solana.com"
+
+[[test.validator.clone]]
+url = "https://api.devnet.solana.com"
+address = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+
+# Deploy to devnet.
+# anchor deploy --provider.cluster devnet --provider.wallet <WALLET-JSON-FILE-PATH>
+
+# Deploy to prod.
+# anchor deploy --provider.cluster mainnet --provider.wallet <WALLET-JSON-FILE-PATH>

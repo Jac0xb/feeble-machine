@@ -1,0 +1,9 @@
+node_modules
+.anchor
+anchor/programs/feeble-machine/target
+anchor/target
+build
+
+.DS_Store
+.env.local
+yarn-error.log
